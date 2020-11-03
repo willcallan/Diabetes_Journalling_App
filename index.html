@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="./lib/css/styles.css">
+</head>
+
+<body>
+
+  <div class="grid-container">
+    <header class="header">
+      <div>
+        Patient Name:
+        <span class="banner-value" id="patient_name">..</span>
+        Gender:
+        <span class="banner-value" id="gender">..</span>
+        DOB:
+        <span class="banner-value" id="dob">..</span>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="screenwide-card">
+        <div>Diagnosis:</div>
+        <br/>
+        <div class="ob-value" id="diagnosisValue">undefined</div>
+      </div>
+      <div class="big-card">
+        <div class="card" id="a1cCard">
+          <div>A1C</div>
+          <div class="ob-value" id="a1cValue">undefined</div>
+          <ul id="a1cNotes"></ul>
+        </div>
+      </div>
+      <div class="big-card">
+        <div class="card" id="glucCard">
+          <div>Blood Sugar</div>
+          <div class="ob-value" id="glucValue">undefined</div>
+          <ul id="glucNotes"></ul>
+        </div>
+        <div class="card" id="bmiCard">
+          <div>BMI</div>
+          <div class="ob-value" id="bmiValue">undefined</div>
+          <ul id="bmiNotes"></ul>
+        </div>
+        <div class="card" id="ageCard">
+          <div>Age</div>
+          <div class="ob-value" id="ageValue">undefined</div>
+          <ul id="ageNotes"></ul>
+        </div>
+      </div>
+
+      <div class="big-card">
+        <div class="card">
+          <div class="title">
+            Additional Notes
+          </div>
+          <ul id="noteList"></ul>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <script src='./lib/js/fhir-client.js'></script>
+  <script src='./lib/js/card_data.js'></script>
+
+  <script src="./lib/js/get-data.js"></script>
+  <!-- uncomment below script and comment above script to switch for easy local testing -->
+  <!-- <script src="./lib/js/get-data-test.js"></script> -->
+</body>
+
+</html>
