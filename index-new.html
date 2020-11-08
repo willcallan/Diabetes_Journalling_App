@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Glucose Tracker</title>
-        <link rel="stylesheet" href="lib/css/mybase.css">
+        <link rel="stylesheet" href="lib/css/base.css">
         <link rel="stylesheet" href="lib/css/index-style.css">
     </head>
 
@@ -17,7 +17,8 @@
                         <!-- Input for glucose measurement -->
                         <div data-column="1" class="cell">
                             <h2 class="field_header">Glucose Measurement *</h2>
-                            <input placeholder="" id="input_glucose_measurement" type="number" class="input"/>
+                            <input placeholder="" id="input_glucose_measurement" type="number" min="0" class="input"
+                                   oninput="this.value = !!this.value && Math.abs(this.value) >= 0 ? Math.abs(this.value) : null"/>
                         </div>
                         <!-- Input for measurement units -->
                         <div data-column="1" class="cell">
@@ -44,7 +45,8 @@
                         <!-- Input for last meal carbs -->
                         <div data-column="1" class="cell">
                             <h2 class="field_header">Carbs in Last Meal (grams)</h2>
-                            <input placeholder="" type="number" class="input" id="input_last_meal_carbs"/>
+                            <input placeholder="" type="number" min="0" class="input" id="input_last_meal_carbs"
+                                   oninput="this.value = !!this.value && Math.abs(this.value) >= 0 ? Math.abs(this.value) : null"/>
                         </div>
                     </div>
                     <div data-columns="1" id="row_symptoms_and_medication" class="row field_row">
@@ -53,13 +55,19 @@
                             <h2 class="field_header">Hypoglycemia Symptoms</h2>
                             <div class="checkbox_holder">
                                 <input type="checkbox" name="checkbox-name" value="1" class="checkbox" id="cb1"/>
-                                <label for="cb1" class="checkbox-label">Option</label><br>
+                                <label for="cb1" class="checkbox-label">Jittery/Shaky</label><br>
                                 <input type="checkbox" name="checkbox-name" value="2" class="checkbox" id="cb2"/>
-                                <label for="cb2" class="checkbox-label">Option</label><br>
+                                <label for="cb2" class="checkbox-label">Dizzy/Faint</label><br>
                                 <input type="checkbox" name="checkbox-name" value="3" class="checkbox" id="cb3"/>
-                                <label for="cb3" class="checkbox-label">Option</label><br>
+                                <label for="cb3" class="checkbox-label">Blurred Vision</label><br>
                                 <input type="checkbox" name="checkbox-name" value="4" class="checkbox" id="cb4"/>
-                                <label for="cb4" class="checkbox-label">Option</label><br>
+                                <label for="cb4" class="checkbox-label">Hungry</label><br>
+                                <input type="checkbox" name="checkbox-name" value="4" class="checkbox" id="cb5"/>
+                                <label for="cb5" class="checkbox-label">Fatigued</label><br>
+                                <input type="checkbox" name="checkbox-name" value="4" class="checkbox" id="cb6"/>
+                                <label for="cb6" class="checkbox-label">Difficulty with Thought Process</label><br>
+                                <input type="checkbox" name="checkbox-name" value="4" class="checkbox" id="cb7"/>
+                                <label for="cb7" class="checkbox-label">Other (specify in Additional Notes)</label><br>
                             </div>
                         </div>
                         <!-- Input for medication -->
@@ -77,11 +85,16 @@
                         <!-- Input for additional notes -->
                         <div data-column="1" class="cell">
                             <h2 class="field_header">Additional Notes</h2>
-                            <textarea name="" class="textarea" id="input_additional_notes"></textarea>
+                            <textarea rows="10" class="text_area" id="input_additional_notes"></textarea>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- Submit button -->
+            <div id="submit_button_row">
+                <button type="submit" id="button_submit" class="button">Submit Measurement</button>
+            </div>
+            <!-- Graph -->
             <div data-columns="1" id="graph_row" class="row">
                 <div data-column="1" class="cell">
                     <h1>Today's Levels:</h1>
