@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Glucose Tracker</title>
+        <link rel="stylesheet" href="lib/css/mybase.css">
+        <link rel="stylesheet" href="lib/css/index-style.css">
+    </head>
+
+    <body>
+    <section id="main_section">
+        <div id="patient_name" class="gpd-text">...</div>
+        <div id="main_container" class="container">
+            <div id="input_grid" class="gdp-row">
+                <div id="column_1" class="cell">
+                    <div data-columns="1" id="row_glucose_measurement" class="row field_row">
+                        <!-- Input for glucose measurement -->
+                        <div data-column="1" class="cell">
+                            <h2 class="field_header">Glucose Measurement *</h2>
+                            <input placeholder="" id="input_glucose_measurement" type="number" class="input"/>
+                        </div>
+                        <!-- Input for measurement units -->
+                        <div data-column="1" class="cell">
+                            <h2 class="field_header">Units *</h2>
+                            <select name="" id="input_measurement_unit" class="select">
+                                <option disabled selected value> -- select an option -- </option>
+                                <option value="1">mg/dL</option>
+                                <option value="2">mmol/L</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div data-columns="1" id="row_last_meal" class="row field_row">
+                        <!-- Input for last meal time -->
+                        <div data-column="1" class="cell">
+                            <h2 class="field_header">Hours Since Last Meal</h2>
+                            <select name="" id="input_last_meal_time" class="select">
+                                <option disabled selected value> -- select an option -- </option>
+                                <option value="1">pre-meal</option>
+                                <option value="2">less than 1 hour agp</option>
+                                <option value="3">1-2 hours ago</option>
+                                <option value="4">over 2 hours ago</option>
+                            </select>
+                        </div>
+                        <!-- Input for last meal carbs -->
+                        <div data-column="1" class="cell">
+                            <h2 class="field_header">Carbs in Last Meal (grams)</h2>
+                            <input placeholder="" type="number" class="input" id="input_last_meal_carbs"/>
+                        </div>
+                    </div>
+                    <div data-columns="1" id="row_symptoms_and_medication" class="row field_row">
+                        <!-- Input for hypoglycemia symptoms -->
+                        <div data-column="1" class="cell">
+                            <h2 class="field_header">Hypoglycemia Symptoms</h2>
+                            <div class="checkbox_holder">
+                                <input type="checkbox" name="checkbox-name" value="1" class="checkbox" id="cb1"/>
+                                <label for="cb1" class="checkbox-label">Option</label><br>
+                                <input type="checkbox" name="checkbox-name" value="2" class="checkbox" id="cb2"/>
+                                <label for="cb2" class="checkbox-label">Option</label><br>
+                                <input type="checkbox" name="checkbox-name" value="3" class="checkbox" id="cb3"/>
+                                <label for="cb3" class="checkbox-label">Option</label><br>
+                                <input type="checkbox" name="checkbox-name" value="4" class="checkbox" id="cb4"/>
+                                <label for="cb4" class="checkbox-label">Option</label><br>
+                            </div>
+                        </div>
+                        <!-- Input for medication -->
+                        <div data-column="1" class="cell">
+                            <h2 class="field_header">Did you take your medicine today?</h2>
+                            <select name="" class="select" id="input_medication">
+                                <option value="1">Yes</option>
+                                <option value="2">No</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div id="column_2" class="cell">
+                    <div data-columns="1" id="row_additional_notes" class="row field_row">
+                        <!-- Input for additional notes -->
+                        <div data-column="1" class="cell">
+                            <h2 class="field_header">Additional Notes</h2>
+                            <textarea name="" class="textarea" id="input_additional_notes"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-columns="1" id="graph_row" class="row">
+                <div data-column="1" class="cell">
+                    <h1>Today's Levels:</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    </body>
+</html>
