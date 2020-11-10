@@ -4,11 +4,8 @@
 
 body {
     margin: 0;
-}
-
-body {
     color:#ffffff;
-    background-image:-webkit-linear-gradient(300deg, rgb(217, 131, 166) 0%, rgb(113, 56, 115) 100%), url('https://images.unsplash.com/photo-1510353157186-4e5fec7beb6d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjEyNzA1fQ');
+    background-image:-webkit-linear-gradient(300deg, rgb(217, 131, 166) 0%, rgb(113, 56, 115) 100%);
     background-repeat:repeat, no-repeat;
     background-position:left top, center center;
     background-attachment:scroll, scroll;
@@ -16,7 +13,7 @@ body {
     font-family:Helvetica, serif;
 }
 
-#main_container {
+.main_container {
     background-color:#ffffff;
     box-shadow:0 0 25px 0 rgba(0,0,0,0.22);
     color:#363636;
@@ -25,49 +22,34 @@ body {
     margin:0 5% 0 5%;
 }
 
-#graph_row {
+.graph_row {
      background-color:#e5e5e5;
      padding:50px 50px 50px 50px;
      margin:80px 0 0 0;
 }
 
-#input_grid {
+.field_grid {
     justify-content:space-between;
 }
 
-#column_1 {
+.column_1 {
     align-self:stretch;
     display:block;
     flex:1 1 100%;
     flex-basis:125%;
 }
 
-#column_2 {
+.column_2 {
+    align-self:stretch;
     display:block;
     flex:1 1 100%;
 }
 
-#patient_name {
-    padding:0 0 0 0;
-    font-size:72px;
-    font-family:Verdana, Geneva, sans-serif;
-    letter-spacing:12px;
-    font-weight:100;
-    text-shadow:0 0 9px black;
-    margin:0 0 50px 5%;
-    max-width:90%;
-}
-
-#submit_button_row {
+.submit_button_row {
     padding:15px 0 0 2.5%;
 }
 
-#button_submit {
-    font-size:20px;
-    font-family:Helvetica, serif;
-}
-
-#main_section {
+.main_section {
     padding:70px 0 70px 0;
 }
 
@@ -75,7 +57,7 @@ body {
     margin:0 0 5px 0;
     font-weight:400;
     text-align:left;
-    white-space:nowrap;
+    white-space:normal;
 }
 
 .field_row {
@@ -114,4 +96,21 @@ body {
     color:#555;
     font-size:14px;
     resize: none;
+}
+
+
+#patient_name {
+    padding:0 0 0 0;
+    font-size:56px;
+    font-family:Verdana, Geneva, sans-serif;
+    letter-spacing:12px;
+    font-weight:100;
+    text-shadow:0 0 9px black;
+    margin:0 0 50px 5%;
+    max-width:90%;
+}
+
+#button_submit {
+    font-size:20px;
+    font-family:Helvetica, serif;
 }

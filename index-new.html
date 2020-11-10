@@ -8,12 +8,12 @@
     </head>
 
     <body>
-    <section id="main_section">
+    <section class="main_section">
         <div id="patient_name" class="gpd-text">...</div>
-        <div id="main_container" class="container">
-            <div id="input_grid" class="gdp-row">
-                <div id="column_1" class="cell">
-                    <div data-columns="1" id="row_glucose_measurement" class="row field_row">
+        <div class="container main_container">
+            <div class="gdp-row field_grid">
+                <div class="cell column_1">
+                    <div data-columns="1" class="row field_row">
                         <!-- Input for glucose measurement -->
                         <div data-column="1" class="cell">
                             <h2 class="field_header">Glucose Measurement *</h2>
@@ -25,21 +25,21 @@
                             <h2 class="field_header">Units *</h2>
                             <select name="" id="input_measurement_unit" class="select">
                                 <option disabled selected value> -- select an option -- </option>
-                                <option value="1">mg/dL</option>
-                                <option value="2">mmol/L</option>
+                                <option value="mgdl">mg/dL</option>
+                                <option value="mmoll">mmol/L</option>
                             </select>
                         </div>
                     </div>
-                    <div data-columns="1" id="row_last_meal" class="row field_row">
+                    <div data-columns="1" class="row field_row">
                         <!-- Input for last meal time -->
                         <div data-column="1" class="cell">
                             <h2 class="field_header">Hours Since Last Meal</h2>
                             <select name="" id="input_last_meal_time" class="select">
                                 <option disabled selected value> -- select an option -- </option>
-                                <option value="1">pre-meal</option>
-                                <option value="2">less than 1 hour agp</option>
-                                <option value="3">1-2 hours ago</option>
-                                <option value="4">over 2 hours ago</option>
+                                <option value="0">pre-meal</option>
+                                <option value="1">less than 1 hour agp</option>
+                                <option value="2">1-2 hours ago</option>
+                                <option value="3">over 2 hours ago</option>
                             </select>
                         </div>
                         <!-- Input for last meal carbs -->
@@ -49,24 +49,24 @@
                                    oninput="this.value = !!this.value && Math.abs(this.value) >= 0 ? Math.abs(this.value) : null"/>
                         </div>
                     </div>
-                    <div data-columns="1" id="row_symptoms_and_medication" class="row field_row">
+                    <div data-columns="1" class="row field_row">
                         <!-- Input for hypoglycemia symptoms -->
                         <div data-column="1" class="cell">
                             <h2 class="field_header">Hypoglycemia Symptoms</h2>
                             <div class="checkbox_holder">
-                                <input type="checkbox" name="checkbox-name" value="1" class="checkbox" id="cb1"/>
+                                <input type="checkbox" name="checkbox-name" value="jittery" class="checkbox" id="cb1"/>
                                 <label for="cb1" class="checkbox-label">Jittery/Shaky</label><br>
-                                <input type="checkbox" name="checkbox-name" value="2" class="checkbox" id="cb2"/>
+                                <input type="checkbox" name="checkbox-name" value="dizzy" class="checkbox" id="cb2"/>
                                 <label for="cb2" class="checkbox-label">Dizzy/Faint</label><br>
-                                <input type="checkbox" name="checkbox-name" value="3" class="checkbox" id="cb3"/>
+                                <input type="checkbox" name="checkbox-name" value="blurred" class="checkbox" id="cb3"/>
                                 <label for="cb3" class="checkbox-label">Blurred Vision</label><br>
-                                <input type="checkbox" name="checkbox-name" value="4" class="checkbox" id="cb4"/>
+                                <input type="checkbox" name="checkbox-name" value="hungry" class="checkbox" id="cb4"/>
                                 <label for="cb4" class="checkbox-label">Hungry</label><br>
-                                <input type="checkbox" name="checkbox-name" value="4" class="checkbox" id="cb5"/>
+                                <input type="checkbox" name="checkbox-name" value="fatigued" class="checkbox" id="cb5"/>
                                 <label for="cb5" class="checkbox-label">Fatigued</label><br>
-                                <input type="checkbox" name="checkbox-name" value="4" class="checkbox" id="cb6"/>
+                                <input type="checkbox" name="checkbox-name" value="thought_processes" class="checkbox" id="cb6"/>
                                 <label for="cb6" class="checkbox-label">Difficulty with Thought Process</label><br>
-                                <input type="checkbox" name="checkbox-name" value="4" class="checkbox" id="cb7"/>
+                                <input type="checkbox" name="checkbox-name" value="other" class="checkbox" id="cb7"/>
                                 <label for="cb7" class="checkbox-label">Other (specify in Additional Notes)</label><br>
                             </div>
                         </div>
@@ -74,14 +74,14 @@
                         <div data-column="1" class="cell">
                             <h2 class="field_header">Did you take your medicine today?</h2>
                             <select name="" class="select" id="input_medication">
-                                <option value="1">Yes</option>
-                                <option value="2">No</option>
+                                <option value="true">Yes</option>
+                                <option value="false">No</option>
                             </select>
                         </div>
                     </div>
                 </div>
-                <div id="column_2" class="cell">
-                    <div data-columns="1" id="row_additional_notes" class="row field_row">
+                <div class="cell column_2">
+                    <div data-columns="1" class="row field_row">
                         <!-- Input for additional notes -->
                         <div data-column="1" class="cell">
                             <h2 class="field_header">Additional Notes</h2>
@@ -91,16 +91,20 @@
                 </div>
             </div>
             <!-- Submit button -->
-            <div id="submit_button_row">
+            <div class="submit_button_row">
                 <button type="submit" id="button_submit" class="button">Submit Measurement</button>
             </div>
             <!-- Graph -->
-            <div data-columns="1" id="graph_row" class="row">
+            <div data-columns="1" class="row graph_row">
                 <div data-column="1" class="cell">
                     <h1>Today's Levels:</h1>
                 </div>
             </div>
         </div>
     </section>
+
+    <script src='./lib/js/fhir-client.js'></script>
+    <script src="./lib/js/get-data-test-new.js"></script>
+
     </body>
 </html>
