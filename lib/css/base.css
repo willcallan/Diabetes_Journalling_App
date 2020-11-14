@@ -181,7 +181,7 @@ b,i,img,label,small,span,u {
     line-height:2rem
 }
 
-.checkbox,.checkbox-label,.radio,.radio-label {
+.symptom_checkbox,.checkbox-label,.radio,.radio-label {
     margin-right:10px
 }
 

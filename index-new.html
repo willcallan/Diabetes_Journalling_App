@@ -23,7 +23,7 @@
                         <!-- Input for measurement units -->
                         <div data-column="1" class="cell">
                             <h2 class="field_header">Units *</h2>
-                            <select name="" id="input_measurement_unit" class="select">
+                            <select id="input_measurement_unit" class="select">
                                 <option disabled selected value> -- select an option -- </option>
                                 <option value="mgdl">mg/dL</option>
                                 <option value="mmoll">mmol/L</option>
@@ -34,11 +34,10 @@
                         <!-- Input for last meal time -->
                         <div data-column="1" class="cell">
                             <h2 class="field_header">Hours Since Last Meal</h2>
-                            <select name="" id="input_last_meal_time" class="select">
+                            <select id="input_last_meal_time" class="select">
                                 <option disabled selected value> -- select an option -- </option>
-                                <option value="0">pre-meal</option>
-                                <option value="1">less than 1 hour agp</option>
-                                <option value="2">1-2 hours ago</option>
+                                <option value="1">pre-meal</option>
+                                <option value="2">less than 2 hours ago</option>
                                 <option value="3">over 2 hours ago</option>
                             </select>
                         </div>
@@ -54,26 +53,27 @@
                         <div data-column="1" class="cell">
                             <h2 class="field_header">Hypoglycemia Symptoms</h2>
                             <div class="checkbox_holder">
-                                <input type="checkbox" name="checkbox-name" value="jittery" class="checkbox" id="cb1"/>
-                                <label for="cb1" class="checkbox-label">Jittery/Shaky</label><br>
-                                <input type="checkbox" name="checkbox-name" value="dizzy" class="checkbox" id="cb2"/>
-                                <label for="cb2" class="checkbox-label">Dizzy/Faint</label><br>
-                                <input type="checkbox" name="checkbox-name" value="blurred" class="checkbox" id="cb3"/>
-                                <label for="cb3" class="checkbox-label">Blurred Vision</label><br>
-                                <input type="checkbox" name="checkbox-name" value="hungry" class="checkbox" id="cb4"/>
-                                <label for="cb4" class="checkbox-label">Hungry</label><br>
-                                <input type="checkbox" name="checkbox-name" value="fatigued" class="checkbox" id="cb5"/>
-                                <label for="cb5" class="checkbox-label">Fatigued</label><br>
-                                <input type="checkbox" name="checkbox-name" value="thought_processes" class="checkbox" id="cb6"/>
-                                <label for="cb6" class="checkbox-label">Difficulty with Thought Process</label><br>
-                                <input type="checkbox" name="checkbox-name" value="other" class="checkbox" id="cb7"/>
-                                <label for="cb7" class="checkbox-label">Other (specify in Additional Notes)</label><br>
+                                <input type="checkbox" value="jittery/shaky" class="symptom_checkbox" id="cb_jittery"/>
+                                <label for="cb_jittery" class="checkbox-label">Jittery/Shaky</label><br>
+                                <input type="checkbox" value="dizzy/faint" class="symptom_checkbox" id="cb_dizzy"/>
+                                <label for="cb_dizzy" class="checkbox-label">Dizzy/Faint</label><br>
+                                <input type="checkbox" value="blurred vision" class="symptom_checkbox" id="cb_vision"/>
+                                <label for="cb_vision" class="checkbox-label">Blurred Vision</label><br>
+                                <input type="checkbox" value="hungry" class="symptom_checkbox" id="cb_hungry"/>
+                                <label for="cb_hungry" class="checkbox-label">Hungry</label><br>
+                                <input type="checkbox" value="fatigued" class="symptom_checkbox" id="cb_fatigued"/>
+                                <label for="cb_fatigued" class="checkbox-label">Fatigued</label><br>
+                                <input type="checkbox" value="difficulty with thought processes" class="symptom_checkbox" id="cb_thought_process"/>
+                                <label for="cb_thought_process" class="checkbox-label">Difficulty with Thought Process</label><br>
+                                <input type="checkbox" value="other" class="symptom_checkbox" id="cb_other"/>
+                                <label for="cb_other" class="checkbox-label">Other (specify in Additional Notes)</label><br>
                             </div>
                         </div>
                         <!-- Input for medication -->
                         <div data-column="1" class="cell">
                             <h2 class="field_header">Did you take your medicine today?</h2>
-                            <select name="" class="select" id="input_medication">
+                            <select class="select" id="input_medication">
+                                <option disabled selected value> -- select an option -- </option>
                                 <option value="true">Yes</option>
                                 <option value="false">No</option>
                             </select>
