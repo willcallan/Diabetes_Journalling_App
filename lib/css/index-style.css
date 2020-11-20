@@ -114,3 +114,9 @@ body {
     font-size:20px;
     font-family:Helvetica, serif;
 }
+
+#graph_container {
+    height: 300px;
+    width: 100%;
+    max-width: 800px;
+}
