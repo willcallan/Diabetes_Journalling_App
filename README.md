@@ -1,7 +1,5 @@
 # Diabetes Journaller
 
-Individual Project for CS6440, Fall 2020.
-
 This is a tool to allow diabetic patients to remotely enter their blood sugar data, allowing their provider and the patient easy, secure, and immediate access to their data.
 
 To access the tool, go to the SMART App Launcher for this repository:
